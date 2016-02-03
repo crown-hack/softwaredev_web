@@ -1,0 +1,103 @@
+<div pageheader></div>
+
+<section id="main" class="p-relative" role="main">
+  <!-- Sidebar -->
+  <aside id="sidebar">
+    <div sidemenu></div>
+  </aside>
+
+  <section id="content" class="container">
+     <h4 class="page-title">{{dashboardName}}</h4>
+
+     <!-- Quick Stats -->
+     <div class="block-area">
+        <div class="row">
+              <div class="col-md-3 col-xs-6">
+                  <div class="tile quick-stats">
+                     <h2 data-value="6521">0</h2>
+                     <small>API Calls</small>
+                  </div>
+              </div>
+              <div class="col-md-3 col-xs-6">
+                  <div class="tile quick-stats media">
+                      <div id="stats-line-3" class="pull-left"></div>
+                      <div class="media-body">
+                          <h2 data-value="1452">0</h2>
+                          <small>Crown Connect Exceptions</small>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-3 col-xs-6">
+                  <div class="tile quick-stats media">
+                      <div id="stats-line-4" class="pull-left"></div>
+                      <div class="media-body">
+                          <h2 data-value="4896">0</h2>
+                          <small>SyCo Gate Queue</small>
+                      </div>
+                   </div>
+              </div>
+              <div class="col-md-3 col-xs-6">
+                   <div class="tile quick-stats media">
+                       <div id="stats-line" class="pull-left"></div>
+                       <div class="media-body">
+                           <h2 data-value="29356">0</h2>
+                           <small>SyCo Syncs</small>
+                       </div>
+                   </div>
+              </div>
+         </div>
+     </div>
+
+     <div class="block-area">
+
+        <hr class="whiter" />
+
+        <div class="block-area" id="tableHover">
+            <h3 class="block-title">Crown IT Release Dashboard</h3>
+            <div class="table-responsive overflow">
+                <table class="table table-bordered table-hover tile">
+                     <thead>
+                        <tr>
+                            <th ng-repeat="(header, value) in releaseData[0]">
+                               {{header}}
+                            </th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr ng-repeat="row in releaseData">
+                           <td ng-repeat="cell in row">{{cell}}</td>
+                        </tr>
+                     </tbody>
+                </table>
+            </div>
+        </div>
+
+        <hr class="whiter" />
+
+        <div class="block-area" id="tableHover">
+             <h3 class="block-title">Upcoming Releases</h3>
+             <div class="table-responsive overflow">
+                 <table class="table table-bordered table-hover tile">
+                     <thead>
+                        <tr>
+                            <th ng-repeat="(header, value) in upcomingReleaseData[0]">
+                               {{header}}
+                            </th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr ng-repeat="row in upcomingReleaseData">
+                           <td ng-repeat="cell in row">{{cell}}</td>
+                        </tr>
+                     </tbody>
+                 </table>
+             </div>
+        </div>
+
+        <small><div class="panel-footer">Last Updated : {{date | date:'medium'}} </div></small>
+
+        <hr class="whiter" />
+     </div>
+
+  </section>
+</section>

@@ -1,0 +1,57 @@
+<div pageheader></div>
+
+<section id="main" class="p-relative" role="main">
+  <!-- Sidebar -->
+  <aside id="sidebar">
+    <div sidemenu></div>
+  </aside>
+
+  <section id="content" class="container">
+     <h4 class="page-title">{{dashboardName}}</h4>
+
+      <div class="block-area">
+         <div class="block-area" id="collapse">
+            <div class="accordion tile">
+                <div class="panel-group block" id="accordion">
+                  <!-- Version 4.2 -->
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                         <a class="accordion-toggle active" data-toggle="collapse" data-parent="#accordion" href="ArchitectureTimeLine/#version42">Version 4.2</a></h3>
+                    </div>
+                    <div id="version42" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                          <vis-network data="ccversion42" options="options" height="50%"></vis-network>
+                        </div>
+                    </div>
+                  </div>
+                  <!-- Version 4.1 -->
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                         <a class="accordion-toggle active" data-toggle="collapse" data-parent="#accordion" href="ArchitectureTimeLine/#version41">Version 4.1</a></h3>
+                    </div>
+                    <div id="version41" class="panel-collapse collapse">
+                        <div class="panel-body">
+                          <vis-network data="ccversion41" options="options" height="50%"></vis-network>
+                        </div>
+                    </div>
+                  </div>
+                  <!-- Version 4.0 -->
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                         <a class="accordion-toggle active" data-toggle="collapse" data-parent="#accordion" href="ArchitectureTimeLine/#version40">Version 4.0</a></h3>
+                    </div>
+                    <div id="version40" class="panel-collapse collapse">
+                        <div class="panel-body">
+                          <vis-network data="ccversion40" options="options" height="50%"></vis-network>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+         </div>
+      </div>
+   </section>
+</section>
